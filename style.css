@@ -4,6 +4,18 @@
     font-family: "Montserrat", serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Use flexbox for the body to allow footer to stay at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color:  #F7F9FB;
+}
+
 .parent {
     display: flex;
     justify-content: center;
@@ -16,7 +28,8 @@
 .Navbar {
     display: flex;
     align-items: center;
-    background-color: #00aeff;
+    background-color: #4E73DF; /* Vibrant Blue */
+    color: white;
     height: 5rem;
     width: 100%;
     position: fixed;
@@ -29,8 +42,8 @@
     /* Ensure navbar stays on top of other content */
 
     & .anchor {
+            color: #FFFFFF; /* White */
         text-decoration: none;
-        color: black;
         font-size: 1.3rem;
         font-weight: 600;
         margin: 0 1rem;
@@ -47,6 +60,7 @@
 
         &:hover {
             font-size: 1.6rem;
+            color: #FFD700; /* Gold */
             background-color: #b3b3b3;
             border-color: #b3b3b3;
             border-radius: 20px;
@@ -67,12 +81,13 @@
 
 .main-content {
     flex: 1;
-    /* background-color: blue; */
     width: 100%;
     padding-top: 60px;
     /* Add padding to push content below the navbar */
     overflow-y: auto;
     /* Allow scrolling of the content */
+    background-color: #F4F7F9; /* Light Gray */
+    color: #193065; /* Dark Navy Blue */
 
     .Home {
         height: 250px;
@@ -91,6 +106,8 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+        background-color: #00AEFF; /* Sky Blue */
+        color: white;
 
         .Home h1,
         .Home p,
@@ -133,14 +150,30 @@
 
     .About {
         margin-top: 100px;
-        background-color: rgb(255, 0, 0);
-        min-height: 100vh;
+        min-height: 50vh;
         /* Ensure each section has enough height */
+        background-color: #E1F5FE ; /* Pale Blue */
+        color: #193065; /* Dark Navy Blue */
+
+        & h1 {
+            font-size: 75px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        & div {
+            padding: 2rem;
+
+            &h3 {
+                font-size: 35px;
+                text-align: center;
+            }
+        }
     }
 
     .Services {
         margin-top: 10px;
-        background-color: rgb(249, 182, 254);
+        background-color: #E3F2FD ; /* Soft Light Blue for background */
         min-height: 100vh;
         /* Ensure each section has enough height */
         display: flex;
@@ -148,6 +181,7 @@
         align-items: center;
         flex-direction: column;
         gap: 20px;
+        color: #193065; /* Dark Navy Blue for text */
 
         & .head h1 {
             font-size: 65px;
@@ -162,11 +196,11 @@
             width: 90%;
 
             & .div1 {
+                background-color: #F9E1A1; /* Soft Gold */
                 height: 410px;
                 width: 40%;
                 border: 2px solid rgb(255, 25, 0);
                 border-radius: 8%;
-                background-color: rgb(198, 198, 198);
                 text-align: center;
 
                 & img {
@@ -188,11 +222,11 @@
             }
 
             & .div2 {
+                background-color: #A4D4FC; /* Light Sky Blue */
                 height: 410px;
                 width: 40%;
                 border: 2px solid rgb(255, 25, 0);
                 border-radius: 8%;
-                background-color: rgb(198, 198, 198);
                 text-align: center;
 
                 & img {
@@ -218,7 +252,7 @@
                 width: 40%;
                 border: 2px solid rgb(255, 25, 0);
                 border-radius: 8%;
-                background-color: rgb(198, 198, 198);
+                background-color: #C1E0FF; /* Pale Blue */
                 text-align: center;
 
                 & img {
@@ -244,7 +278,8 @@
 
     .Contact {
         margin-top: 10px;
-        background-color: rgb(0, 255, 72);
+        background-color: #F3F4F6 ; /* Light Cyan */
+        color: #193065; /* Dark Navy Blue */
         min-height: 60vh;
         /* Ensure each section has enough height */
         display: flex;
@@ -299,9 +334,128 @@
     }
 }
 
-/* .Footer {
-    height: 50px;
-    background-color: black;
-    color: white;
-    width: 100%;
-} */
+.Footer {
+    background: linear-gradient(to bottom, #193065, #1c3a63);
+    color: #FFFFFF; /* White text color for clarity */
+    padding: 20px;
+    margin-top: 50px;
+    min-height: 30vh;
+
+    .M-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        height: auto;
+        flex-wrap: wrap;
+        /* Ensures responsiveness */
+    }
+    
+    .contact {
+        flex: 1;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    
+    .Heading-1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #FFFFFF;
+    }
+    
+    .para-1 {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    
+    .but-1 {
+        background-color: #FFD700; /* Gold */
+        color: #193065; /* Dark Navy Blue */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .but-1:hover, a:hover {
+        background-color: #00aeff;  /* Bright Blue */
+        color: #193065;  /* Dark Navy Blue */
+    }
+    
+    
+    .settle {
+        flex: 1;
+        margin-top: 20px;
+    }
+    
+    .info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .info-head {
+        text-align: left;
+        line-height: 1.5;
+        margin-right: 15px;
+    }
+    
+    .info-content {
+        text-align: left;
+        line-height: 1.5;
+    }
+    
+    .info-content p {
+        color: rgb(0, 128, 255);
+        margin: 0;
+    }
+    
+    .lineh {
+        line-height: 1.5;
+    }
+    
+    .images {
+        display: flex;
+        gap: 15px;
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .images i {
+        cursor: pointer;
+    }
+
+    .Footer .images i:hover {
+        color: #00aeff; /* Bright Blue on icon hover */
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .M-div {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .Contact,
+        .settle {
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        .info {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .images {
+            justify-content: center;
+        }
+    }
+}
+
