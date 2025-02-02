@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    background-color: #00aeff;
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    /* Adjust padding as needed */
+    z-index: 1000;
+    /* Ensure navbar stays on top of other content */
+
+    & .anchor {
+        text-decoration: none;
+        color: black;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 0 1rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid transparent;
+        /* Initially no visible border */
+        border-radius: 8px;
+        /* Curved edges */
+        transition: all 0.3s ease;
+        /* Optional: Add some subtle shadow to simulate a button-like effect */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        /* Centers text */
+
+        &:hover {
+            font-size: 1.6rem;
+            background-color: #b3b3b3;
+            border-color: #b3b3b3;
+            border-radius: 20px;
+            /* Ensure the hover effect keeps the curved edges */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            /* Slightly stronger shadow */
+        }
+    }
+
+    & img {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        left: 20px;
+        position: absolute;
+    }
+}
+
+.main-content {
+    flex: 1;
+    /* background-color: blue; */
+    width: 100%;
+    padding-top: 60px;
+    /* Add padding to push content below the navbar */
+    overflow-y: auto;
+    /* Allow scrolling of the content */
+
+    .Home {
+        height: 250px;
+        min-height: 100vh;
+        /* Ensure each section has enough height */
+        width: 80%;
+        position: relative;
+        left: 10rem;
+        margin-top: 100px;
+        background-image: url("./imgs/bg.jpg.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+        /* Set opacity only on the background */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .Home h1,
+        .Home p,
+        .Home button {
+            position: relative;
+            /* Position the text elements above the background */
+            opacity: 1;
+            /* Ensures text is fully visible */
+            z-index: 1;
+            /* Ensures text appears above the background */
+        }
+
+        p {
+            margin-top: -220px;
+            width: 80%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        button {
+            margin-top: -120px;
+            height: 55px;
+            width: 170px;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            border: 2.5px solid rgb(0, 0, 0);
+            background-color: rgba(207, 21, 0, 0.829);
+            border-radius: 5%;
+            color: white;
+        }
+
+        h1 {
+            margin-top: -20px;
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+
+    .About {
+        margin-top: 100px;
+        background-color: rgb(255, 0, 0);
+        min-height: 100vh;
+        /* Ensure each section has enough height */
+    }
+
+    .Services {
+        margin-top: 10px;
+        background-color: rgb(249, 182, 254);
+        min-height: 100vh;
+        /* Ensure each section has enough height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        & .head h1 {
+            font-size: 65px;
+            font-weight: 700;
+        }
+
+        & .divsHead {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            width: 90%;
+
+            & .div1 {
+                height: 410px;
+                width: 40%;
+                border: 2px solid rgb(255, 25, 0);
+                border-radius: 8%;
+                background-color: rgb(198, 198, 198);
+                text-align: center;
+
+                & img {
+                    height: 150px;
+                    margin-top: 40px;
+                }
+
+                & h2 {
+                    margin-top: 20px;
+                    font-size: 35px;
+                }
+
+                & p {
+                    margin-top: 20px;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+
+            }
+
+            & .div2 {
+                height: 410px;
+                width: 40%;
+                border: 2px solid rgb(255, 25, 0);
+                border-radius: 8%;
+                background-color: rgb(198, 198, 198);
+                text-align: center;
+
+                & img {
+                    height: 150px;
+                    margin-top: 40px;
+                }
+
+                & h2 {
+                    margin-top: 20px;
+                    font-size: 35px;
+
+                }
+
+                & p {
+                    margin-top: 20px;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+            }
+
+            & .div3 {
+                height: 410px;
+                width: 40%;
+                border: 2px solid rgb(255, 25, 0);
+                border-radius: 8%;
+                background-color: rgb(198, 198, 198);
+                text-align: center;
+
+                & img {
+                    height: 150px;
+                    margin-top: 40px;
+                }
+
+                & h2 {
+                    margin-top: 20px;
+                    font-size: 35px;
+
+                }
+
+                & p {
+                    margin-top: 20px;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+            }
+
+        }
+    }
+
+    .Contact {
+        margin-top: 10px;
+        background-color: rgb(0, 255, 72);
+        min-height: 60vh;
+        /* Ensure each section has enough height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-image: url('./imgs/bg1.jpg.jpg');
+        background-position: center;
+        background-size: cover;
+        opacity: 0.7;
+
+
+        & .head h1 {
+            font-size: 85px;
+            font-weight: 700;
+            opacity: 1;
+            margin-top: -50px;
+        }
+
+        & .Img-div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+
+            & .img1 img {
+                height: 150px;
+                opacity: 1;
+                margin: 0 2rem 0 2rem;
+            }
+
+            & .img2 img {
+                height: 150px;
+                opacity: 1;
+                margin: 0 2rem 0 2rem;
+            }
+
+            & .img3 img {
+                height: 150px;
+                opacity: 1;
+                margin: 0 2rem 0 2rem;
+            }
+
+            & .img4 img {
+                height: 150px;
+                opacity: 1;
+                margin: 0 2rem 0 2rem;
+            }
+        }
+
+    }
+}
+
+/* .Footer {
+    height: 50px;
+    background-color: black;
+    color: white;
+    width: 100%;
+} */
